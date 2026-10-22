@@ -3,11 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>お薦めな食べ物</title>
+  <script>
+    function updateClock() {
+      var now = new Date();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+
+    
+      if (hours < 10) hours = '0' + hours;
+      if (minutes < 10) minutes = '0' + minutes;
+      if (seconds < 10) seconds = '0' + seconds;
+
+
+      var timeString = hours + ':' + minutes + ':' + seconds;
+      document.getElementById('clock').innerHTML = timeString;
+    }
+
+  
+    setInterval(updateClock, 1000);
+
+  
+    window.onload = updateClock;
+  </script>
 </head>
 <body>
+
+  <div style="background-color: #f0f4f8; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 20px;">
+    <h2 style="margin: 0 0 5px 0; font-size: 18px; color: #555;">現在時刻</h2>
+    <div id="clock" style="font-size: 40px; font-weight: bold; color: #0066cc; letter-spacing: 2px;">
+      00:00:00
+    </div>
+  </div>
+
+
   <h1>Webシステム構築基礎 第2回課題</h1>
   <p>皆川駿斗(AAA25027)</p>
-　<img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6fac6?w=400" width="400" alt="リンゴの写真">
+  <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6fac6?w=400" width="400" alt="リンゴの写真">
   <h2>お薦めな食べ物：リンゴ</h2>
   <p>私がおすすめする食べ物は「リンゴ」です。その理由は以下の通りです。</p>
   
@@ -22,4 +54,3 @@
   <br>
   <a href="second.html">お薦めな旅行先（西宮）のページへ</a>
 </body>
-</html>

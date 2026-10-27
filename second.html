@@ -13,6 +13,38 @@
     </form>
 
     <hr>
+
+    <h2>実例5：ラジオボタンで計算方法を選択</h2>
+    <form onsubmit="return false;">
+        <p>
+            <input id="num01" type="number" step="any">
+
+            <input id="add" type="radio" name="cal0" value="+" checked>
+            <label for="add">足す</label>
+            
+            <input id="subtract" type="radio" name="cal0" value="-">
+            <label for="subtract">引く</label>
+            
+            <input id="multiply" type="radio" name="cal0" value="*">
+            <label for="multiply">掛ける</label>
+            
+            <input id="divide" type="radio" name="cal0" value="/">
+            <label for="divide">割る</label>
+
+            <input id="num02" type="number" step="any">
+
+            <button onclick="result0.value =
+                (cal0[0].checked)? Number(num01.value) + Number(num02.value) :
+                (cal0[1].checked)? Number(num01.value) - Number(num02.value) :
+                (cal0[2].checked)? Number(num01.value) * Number(num02.value) :
+                (cal0[3].checked)? Number(num01.value) / Number(num02.value) : NaN">計算</button>
+            
+            ＝ <output id="result0"></output>
+        </p>
+    </form>
+
+    <hr>
+
   <h1>Webシステム構築基礎 第2回課題</h1>
   <p>皆川駿斗(AAA25027)</p>
 

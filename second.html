@@ -5,7 +5,14 @@
   <title>お薦めな旅行先</title>
 </head>
 <body>
- 
+    <h2>BMI指標計算</h2>
+    <form oninput="bmi.value = Math.round(Number(weight.value) / Math.pow(Number(height.value)/100, 2) * 10) / 10">
+        <p><label>体重(kg)：<input name="weight" type="number" step="any"></label></p>
+        <p><label>身長(cm)：<input name="height" type="number" step="any"></label></p>
+        <p><label>BMI：<output name="bmi"></output></label></p>
+    </form>
+
+    <hr>
   <h1>Webシステム構築基礎 第2回課題</h1>
   <p>皆川駿斗(AAA25027)</p>
 
